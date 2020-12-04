@@ -7,6 +7,7 @@ const Producto = require('../models/productos');
 router.get('/', async (req, res) => {
         const productos = await Producto.find();
         res.json(productos);
+        res.send("hello")
     });
 
 router.get('/:id', async (req, res) => {
